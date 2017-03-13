@@ -21,7 +21,7 @@
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": ""
+        "application/json": "$${apiGatewayRequestTemplate}"
       },
       "responses": {
         "400": {

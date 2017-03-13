@@ -6,6 +6,8 @@ import logging
 log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
+
 def handler(event, context):
     log.error("Received event {}".format(json.dumps(event)))
-    return {"message": "I recieved - {}".format(event["message"])}
+    response = "I recieved - {}".format(event.get("message", "no get param"))
+    return {"message": response}
